@@ -22,6 +22,14 @@ Por otro lado, también la puedes clonar en el directorio que quieras
 	git clone git@github.com:JJ/repo-plantilla.git
 	mv repo-plantilla .git-template
 ```
+
+Si quieres quitar todos los ficheros que no sean estrictamente de la plantilla puedes borrarlos a mano antes de empezar a clonarlos, o bien usar la rama que ya los ha eliminado:
+
+```
+	cd ~
+	git clone git@github.com:JJ/repo-plantilla.git --branch instalar
+	mv repo-plantilla .git-template
+```
 	
 Y luego usarse con 
 

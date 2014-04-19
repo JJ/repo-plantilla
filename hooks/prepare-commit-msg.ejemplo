@@ -1,0 +1,4 @@
+#!/bin/sh
+
+SOB=$(git var github.user)
+grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"

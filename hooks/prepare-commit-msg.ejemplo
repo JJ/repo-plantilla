@@ -5,4 +5,4 @@
 # chmod +x prepare-commit-msg
 
 SOB=$(git config github.user)
-grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
+grep -qs "^$SOB" "$1" || echo ".Cambio por $SOB" >> "$1"

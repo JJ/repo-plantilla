@@ -4,5 +4,5 @@
 # cp prepare-commit-msg.ejemplo prepare-commit-msg
 # chmod +x prepare-commit-msg
 
-SOB=$(git var github.user)
+SOB=$(git config github.user)
 grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"

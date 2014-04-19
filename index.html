@@ -1,0 +1,97 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Plantilla para un repositorio Git</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Plantilla para un repositorio Git</h1>
+    </header>
+    <div id="container">
+      <p class="tagline"></p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/JJ/repo-plantilla/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/JJ/repo-plantilla/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/JJ/repo-plantilla" class="code">View Plantilla para un repositorio Git on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="plantilla-para-repositorios-de-git" class="anchor" href="#plantilla-para-repositorios-de-git"><span class="octicon octicon-link"></span></a>Plantilla para repositorios de git</h1>
+
+<p>Un ejemplo de plantilla para repositorio de git. Tiene algún fichero traducido al español y algún ejemplo de <em>hook</em> ligeramente modificado.</p>
+
+<h2>
+<a name="instrucciones" class="anchor" href="#instrucciones"><span class="octicon octicon-link"></span></a>Instrucciones</h2>
+
+<p>Para sustituir a la plantilla por defecto de git</p>
+
+<pre><code>    sudo mv /usr/share/git-core/templates/ /usr/share/git-core/templates-orig # Quita de enmedio las plantillas originales
+    sudo cd /usr/share/git-core &amp;&amp; git clone git@github.com:JJ/repo-plantilla.git &amp;&amp; mv repo-plantilla templates
+</code></pre>
+
+<p>Cada vez que hagas <code>git clone</code> o <code>git init</code> se usará esta plantilla para crear la estructura del repositorio bajo <code>.git</code> en vez de la que hay por defecto.</p>
+
+<p>Por otro lado, también la puedes clonar en el directorio que quieras</p>
+
+<pre><code>    cd ~
+    git clone git@github.com:JJ/repo-plantilla.git
+    mv repo-plantilla .git-template
+</code></pre>
+
+<p>Y luego usarse con </p>
+
+<pre><code>    git init --template=/home/miusuario/.git-template
+</code></pre>
+
+<p>Es importante que se ponga el camino completo a <code>.git-template</code> sin usar la abreviatura <code>~</code> del shell. </p>
+
+<p>Tendrás todos los ficheros en el subdirectorio <code>.git</code>. Es posible que quieras borrar este fichero README, y activar el <em>hook</em> de ejemplo haciendo</p>
+
+<pre><code>    mv .git/hooks/prepare-commit-msg.ejemplo .git/hooks/prepare-commit-msg
+</code></pre>
+
+<p>que añade una firma (editable) a todos los mensajes de <em>commit</em>. </p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/JJ" class="avatar"><img src="https://avatars2.githubusercontent.com/u/500?s=60" width="48" height="48"/></a> <a href="https://github.com/JJ">JJ</a> maintains <a href="https://github.com/JJ/repo-plantilla">Plantilla para un repositorio Git</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/JJ/repo-plantilla/tarball/master" class="tar">tar</a><a href="https://github.com/JJ/repo-plantilla/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>

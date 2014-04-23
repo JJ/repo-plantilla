@@ -10,7 +10,7 @@ Para sustituir a la plantilla por defecto de git
 
 ```
 	sudo mv /usr/share/git-core/templates/ /usr/share/git-core/templates-orig # Quita de enmedio las plantillas originales
-    sudo cd /usr/share/git-core && git clone git@github.com:JJ/repo-plantilla.git && mv repo-plantilla templates
+        cd /usr/share/git-core && git clone git@github.com:JJ/repo-plantilla.git && mv repo-plantilla templates
 ```
 
 Cada vez que hagas `git clone` o `git init` se usará esta plantilla para crear la estructura del repositorio bajo `.git` en vez de la que hay por defecto.

@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var msg_file = process.argv[2];
+
+fs.readFile( msg_file, 'utf8', function( err, data ) {
+    if ( err ) throw err;
+    var lines = data.split("\n");
+    if ( lines[0].length > 50 ) {
+	console.log("[FORMATO] Primera línea > 50 caracteres");
+	process.exit(1);
+    }
+})

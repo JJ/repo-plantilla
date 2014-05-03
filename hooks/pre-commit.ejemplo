@@ -1,0 +1,17 @@
+#!/usr/bin/env perl
+
+my $is_head = `git rev-parse --verify HEAD`;
+
+my $last_commit = $is_head?"HEAD":"4b825dc642cb6eb9a060e54bf8d69288fbee4904";
+my @changes = `git diff-index --name-only $last_commit`;
+
+my %policies = ( no_underscore => qr/_/ );
+
+for my $f (@changes) {
+    for my $p ( keys %policies ) {
+	if ($f =~ /$policies{$p}/) {
+	    die "[FORMATO]: $p ";
+	}
+    }
+}
+    

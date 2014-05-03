@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#Recuerda hacer
+# cp prepare-commit-msg.ejemplo prepare-commit-msg
+# chmod +x prepare-commit-msg
+
+STATS=$(git diff --cached --shortstat)
+echo ". Cambios en este commit\n  ${STATS}" >> "$1"

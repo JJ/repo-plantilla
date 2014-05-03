@@ -1,12 +1,12 @@
 Plantilla para repositorios de git
 =============
 
-Un ejemplo de plantilla para repositorio de git. Tiene algún fichero traducido al español y algún ejemplo de *hook* ligeramente modificado.
+Un ejemplo de plantilla para repositorio de git. Tiene algún fichero traducido al español y un ejemplo de *hook* ligeramente modificado.
 
 Instrucciones
 ----
 
-Para sustituir a la plantilla por defecto de git
+Para sustituir a la plantilla por defecto de `git`
 
 ```
 	sudo mv /usr/share/git-core/templates/ /usr/share/git-core/templates-orig # Quita de enmedio las plantillas originales
@@ -31,7 +31,7 @@ Si quieres quitar todos los ficheros que no sean estrictamente de la plantilla p
 	mv repo-plantilla .git-template
 ```
 	
-Y luego usarse con 
+Y luego usarlo con 
 
 ```
 	git init --template=/home/miusuario/.git-template
@@ -39,7 +39,7 @@ Y luego usarse con
 
 Es importante que se ponga el camino completo a `.git-template` sin usar la abreviatura `~` del shell. 
 
-Tendrás todos los ficheros en el subdirectorio `.git`. Es posible que quieras borrar este fichero README, y activar el *hook* de ejemplo haciendo
+Esta orden copiará todos los ficheros en el subdirectorio indicado al subdirectorio `.git`. Es posible que quieras borrar este fichero `README`, y activar el *hook* de ejemplo haciendo
 
 ```
 	mv .git/hooks/prepare-commit-msg.ejemplo .git/hooks/prepare-commit-msg

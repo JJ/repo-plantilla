@@ -1,5 +1,5 @@
 # git ls-files --others --exclude-from=.git/info/exclude
-# Las líneas que comienzan don '#' son comenarios
+# Las líneas que comienzan con '#' son comenarios
 # Por ejemplo, para un proyecto en C, podrían usarse estos patrones
 # (Descomentar para usar)
 # *.[oa]
